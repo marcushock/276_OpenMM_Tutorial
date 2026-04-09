@@ -17,7 +17,7 @@ params = CharmmParameterSet(
     'charmm-gui-4183445964/toppar/toppar_water_ions.str')
 
 # Create the system, defining periodic boundary conditions, a nonbonded cutoff, and constrain bonds with hydrogen to remain constant-length.
-system = psf.createSystem(params, nonbondedMethod=PME, nonbondedCutoff=1*nanometer, constraints=HBonds)
+system = psf.createSystem(params, nonbondedMethod=PME, nonbondedCutoff=1.2*nanometer, constraints=HBonds)
 
 # Create a Langevin integrator for constant temperature.
 integrator = LangevinIntegrator(300.0*kelvin, 1/picosecond, 0.002*picoseconds)

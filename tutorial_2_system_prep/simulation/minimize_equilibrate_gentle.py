@@ -32,7 +32,7 @@ simulation = md_min_equil_gentle.main(
     temperature,
     target_pressure,
     is_membrane_system=False,
-    stage_8_total_steps=125000,  # 0.5 ns at 4 fs timestep
+    stage_8_total_steps=1000000,  # 2 ns at 2 fs timestep
     stage_8_timestep=0.002 * unit.picoseconds,
     eq_traj_interval=1000,
 )
